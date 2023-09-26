@@ -2,6 +2,20 @@ import {features} from '../static/text';
 import style, {layout} from '../style';
 import Button from './Button'
 
+const FeatureCard = ({icon, title, content, index}) => {
+  return (
+    <div className={`flex flex-row items-center p-6 rounded-[20px] ${index !== features.length -1 ? 'mb-6' : 'mb-0'} feature-card font-poppins`}>
+      <div className={`w-[64px] h-[64px] rounded-full ${style.flexCenter} bg-dimBlue`}>
+        <img src={icon} className='w-[50%] h-[50%] object-contain' />
+      </div>
+      <div className='flex flex-col flex-1 ml-3'>
+        <h4 className='text-[18px] text-white font-semibold mb-[8px]'>{title}</h4>
+        <p className='text-dimWhite leading-[24px]'>{content}</p>
+      </div>
+    </div>
+  )
+}
+
 const Business = () => {
   return (
     <section id='features' className={layout.section}>
@@ -11,17 +25,9 @@ const Business = () => {
         <Button />
       </div>
 
-      <div className={`flex flex-col justify-between font-poppins ${style.paddingY} mt-[50px]`}>
-        {features.map( e => (
-          <div key={e.id} className='flex text-white mb-[30px] items-center'>
-            <div className='flex justify-center items-center w-[64px] h-[64px] rounded-full bg-dimBlue mr-[20px]'>
-              <img src={e.icon} alt="features-icon" className='sm:w-[38px] sm:h-[38px]'/>
-            </div>
-            <div className='w-[366px]'>
-              <p className='sm:text-[18px] text-[16px] mb-[8px] font-semibold'>{e.title}</p>
-              <p className='sm:text-[16px] text-[14px] text-dimWhite'>{e.content}</p>
-            </div>
-          </div>
+      <div className={`${layout.sectionImg} flex-col`}>
+        {features.map( (feature, index) => (
+          <FeatureCard key={features.id} {...feature} index={index}/>
         ))}
       </div>
     </section>
