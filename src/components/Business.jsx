@@ -18,7 +18,7 @@ const FeatureCard = ({icon, title, content, index}) => {
 
 const Business = () => {
   return (
-    <section id='features' className={layout.section}>
+    <section className={layout.section} id='features'>
       <div className={layout.sectionInfo}>
         <h2 className={`${style.heading2} mb-[24px]`}>You do the business, <br className='sm:block hidden'/>We'll handle the money.</h2>
         <p className={`${style.paragraph} mb-[48px]`}>With the right credit card, you can improve your financial life <br className='sm:block hidden' />by building credit, earning rewards and saving money. But <br className='sm:block hidden'/>with hundreds of credit cards on the market</p>
