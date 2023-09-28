@@ -8,7 +8,7 @@ import Footer from './Footer'
 import GetStarted from './GetStarted'
 import Hero from './Hero'
 import Navbar from './Navbar'
-import Sponsor from './Sponsor'
+import Client from './Client'
 import Stats from './Stats'
 import Testimonial from './Testimonial'
 
@@ -23,7 +23,7 @@ export {
   GetStarted,
   Hero,
   Navbar,
-  Sponsor,
+  Client,
   Stats,
   Testimonial
 };
