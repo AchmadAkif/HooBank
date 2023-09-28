@@ -5,7 +5,7 @@ import Button from './Button'
 
 const CardDeal = () => {
   return (
-    <section className={layout.sectionReverse}>
+    <section className={`${layout.sectionReverse} sm:mb-0 mb-16`}>
     <div className={`${layout.sectionImg} flex-col`}>
       <img src={card} className='w-[600px]'/>
     </div>
