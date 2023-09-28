@@ -5,6 +5,8 @@ import {bill, google, apple} from '../assets/index'
 const Billing = () => {
   return (
   <section className={`${layout.section} sm:mb-0 mb-16`}>
+    <div className='absolute z-[0] w-[60%] h-[60%] left-[-60%] pink__gradient' />
+
     <div className={`${layout.sectionImgReverse} flex-col`}>
       <img src={bill} className='w-[600px]'/>
     </div>
